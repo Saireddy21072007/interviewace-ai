@@ -1,0 +1,33 @@
+# ---- core API ----
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic[email]==2.10.4
+pydantic-settings==2.7.1
+python-multipart==0.0.20
+python-dotenv==1.0.1
+
+# ---- database ----
+SQLAlchemy==2.0.36
+# PostgreSQL driver. Not needed for the default SQLite setup, but installed so
+# switching DATABASE_URL to Postgres is a one-line change.
+psycopg[binary]==3.2.3
+
+# ---- auth ----
+passlib[bcrypt]==1.7.4
+bcrypt==4.2.1
+PyJWT==2.10.1
+
+# ---- resume parsing ----
+pypdf==5.1.0
+python-docx==1.1.2
+
+# ---- tests ----
+pytest==8.3.4
+httpx==0.28.1
+
+# ---- OPTIONAL EXTRAS (uncomment what you want; the app runs without them) ----
+# anthropic==0.42.0          # Claude - default LLM provider
+# openai==1.59.6             # GPT + hosted Whisper
+# google-genai==0.5.0        # Gemini
+# faster-whisper==1.1.0      # local speech-to-text, no API key needed
+# spacy==3.8.3               # richer resume NER (see docs/SETUP.md)

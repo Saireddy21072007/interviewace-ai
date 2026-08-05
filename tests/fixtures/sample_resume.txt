@@ -1,0 +1,48 @@
+Ananya Sharma
+Bengaluru, India | ananya.sharma@example.com | +91 98765 43210
+linkedin.com/in/ananyasharma | github.com/ananyasharma
+
+SUMMARY
+Final-year Computer Science student building full stack products with React and
+FastAPI. Interested in applied AI and backend systems.
+
+EDUCATION
+B.Tech, Computer Science and Engineering - Amrita Vishwa Vidyapeetham
+2022 - 2026 | CGPA 8.7/10
+Relevant coursework: Data Structures, Algorithms, DBMS, Operating Systems,
+Computer Networks, Machine Learning.
+
+EXPERIENCE
+Software Engineering Intern, Zylo Technologies
+May 2025 - Jul 2025
+- Built 12 REST APIs in FastAPI backed by PostgreSQL, cutting average response
+  time from 480ms to 120ms by adding composite indexes and Redis caching.
+- Automated the nightly report job with a Celery worker, saving the ops team
+  6 hours a week.
+- Wrote 74 pytest cases and raised service coverage from 31% to 68%.
+
+PROJECTS
+MediTrack - appointment platform for small clinics
+- Designed a React + TypeScript frontend and a FastAPI backend with JWT auth,
+  serving 400 monthly bookings across 3 pilot clinics.
+- Deployed on Render with GitHub Actions running tests on every pull request.
+
+Resume Ranker - ML side project
+- Trained a scikit-learn classifier on 5,000 resumes to predict shortlisting,
+  reaching 0.82 F1 after fixing a data leak in the train/test split.
+- Wrote the feature engineering pipeline with pandas and numpy.
+
+TECHNICAL SKILLS
+Languages: Python, JavaScript, TypeScript, SQL, C++
+Frontend: React, Tailwind CSS, HTML, CSS
+Backend: FastAPI, Node.js, REST APIs, JWT authentication
+Data: PostgreSQL, MongoDB, pandas, numpy, scikit-learn
+Tools: Git, Docker, GitHub Actions, Linux, pytest
+
+CERTIFICATIONS
+AWS Cloud Practitioner (2025)
+Machine Learning Specialization, Coursera (2024)
+
+ACHIEVEMENTS
+Winner, Amrita Hackathon 2025 (team of 4, built an offline-first clinic app).
+Led the college coding club; mentored 30 juniors through a DSA bootcamp.

@@ -1,0 +1,39 @@
+# --- secrets ---
+.env
+*.pem
+credentials.json
+
+# --- python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+tsconfig.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+.coverage
+htmlcov/
+
+# --- node ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+
+# --- app data (never commit user uploads or the dev database) ---
+storage/
+*.db
+*.sqlite3
+backend/interviewace.db
+
+# --- launcher marker (run.bat / run.sh write this after installing deps) ---
+.deps-installed
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

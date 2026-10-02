@@ -1,12 +1,42 @@
 # InterviewAce AI
 
+![ci](https://github.com/Saireddy21072007/interviewace-ai/actions/workflows/ci.yml/badge.svg)
+![python](https://img.shields.io/badge/FastAPI-Python%203.12-009688)
+![react](https://img.shields.io/badge/React-TypeScript-3178c6)
+
 An AI-powered interview preparation platform. Upload your resume, get the score
 an applicant-tracking system would give it, sit a voice mock interview generated
 from your own projects, and get a week-by-week study plan built from the gaps
 that interview exposed.
 
-Built for the 22AIE301 project, combining full stack development (CSE Core) with
+Built for the 22AIE301 course project, combining full stack development (CSE Core) with
 applied AI (CSE AI).
+
+| Resume analysis | Interview report |
+|---|---|
+| ![resume](docs/screenshots/resume.png) | ![report](docs/screenshots/report.png) |
+| **Dashboard** | **Learning roadmap** |
+| ![dashboard](docs/screenshots/dashboard.png) | ![roadmap](docs/screenshots/roadmap.png) |
+
+<sub>Screenshots use the fictional sample resume in `tests/fixtures/` and the offline engine (no API key).</sub>
+
+## Architecture
+
+```mermaid
+flowchart LR
+    U[Browser<br/>React + TS + Tailwind] -->|JSON / multipart| B[FastAPI<br/>auth, routers, storage]
+    B --> D[(SQLite / PostgreSQL)]
+    B --> A[ai/ - plain Python library]
+    A --> P[resume_parser + ats<br/>rule-based, deterministic]
+    A --> Q[question_gen + evaluator<br/>5-dimension rubric]
+    A --> R[recommender<br/>gaps -> weekly plan]
+    A --> L[llm.py<br/>Anthropic / OpenAI / Gemini<br/>or offline fallback]
+    A --> S[stt.py<br/>faster-whisper / Whisper API<br/>or browser speech]
+```
+
+`ai/` imports no web framework and no database; `backend/` contains no scoring
+logic; `frontend/` renders what the API returns. Details in
+[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ---
 
@@ -128,7 +158,7 @@ structure is not, here is this week's drill".
 ## Layout
 
 ```
-ai inter/
+interviewace-ai/
 ├── ai/                  the intelligence layer - plain Python, no web framework
 │   ├── llm.py           the ONLY file that talks to a model provider
 │   ├── stt.py           the ONLY file that turns audio into text

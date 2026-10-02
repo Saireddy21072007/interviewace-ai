@@ -37,3 +37,6 @@ backend/interviewace.db
 .idea/
 .DS_Store
 Thumbs.db
+
+# --- local tool config ---
+.claude/

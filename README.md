@@ -4,10 +4,6 @@
 ![python](https://img.shields.io/badge/FastAPI-Python%203.12-009688)
 ![react](https://img.shields.io/badge/React-TypeScript-3178c6)
 
-An AI-powered interview preparation platform. Upload your resume, get the score
-an applicant-tracking system would give it, sit a voice mock interview generated
-from your own projects, and get a week-by-week study plan built from the gaps
-that interview exposed.
 
 Built for the 22AIE301 course project, combining full stack development (CSE Core) with
 applied AI (CSE AI).

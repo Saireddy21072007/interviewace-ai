@@ -21,7 +21,9 @@ PyJWT==2.10.1
 pypdf==5.1.0
 python-docx==1.1.2
 
-
+# ---- tests ----
+pytest==8.3.4
+httpx==0.28.1
 
 # ---- OPTIONAL EXTRAS (uncomment what you want; the app runs without them) ----
 # anthropic==0.42.0          # Claude - default LLM provider

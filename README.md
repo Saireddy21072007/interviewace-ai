@@ -1,4 +1,8 @@
 # InterviewAce AI
+An AI-powered interview preparation platform. Upload your resume, get the score
+an applicant-tracking system would give it, sit a voice mock interview generated
+from your own projects, and get a week-by-week study plan built from the gaps
+that interview exposed.
 
 
 ![ci](https://github.com/Saireddy21072007/interviewace-ai/actions/workflows/ci.yml/badge.svg)

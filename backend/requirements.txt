@@ -1,3 +1,10 @@
+# ---- core API ----
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic[email]==2.10.4
+pydantic-settings==2.7.1
+python-multipart==0.0.20
+python-dotenv==1.0.1
 
 # ---- database ----
 SQLAlchemy==2.0.36

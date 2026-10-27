@@ -8,8 +8,7 @@
 #    ./run.sh api      start only the backend  (http://localhost:8000/docs)
 #    ./run.sh web      start only the frontend (http://localhost:5173)
 # ===========================================================================
-set -euo pipefail
-cd "$(dirname "$0")"
+
 
 ACTION="${1:-start}"
 PY="$(command -v python3 || command -v python)"

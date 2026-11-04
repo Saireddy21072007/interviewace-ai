@@ -7,7 +7,10 @@ python-multipart==0.0.20
 python-dotenv==1.0.1
 
 # ---- database ----
-
+SQLAlchemy==2.0.36
+# PostgreSQL driver. Not needed for the default SQLite setup, but installed so
+# switching DATABASE_URL to Postgres is a one-line change.
+psycopg[binary]==3.2.3
 
 # ---- auth ----
 passlib[bcrypt]==1.7.4

@@ -8,7 +8,9 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.orm import Session
 
-
+from .database import get_db
+from .models import User
+from .security import TokenError, decode_access_token
 
 # auto_error=False so we can return our own message instead of FastAPI's
 # generic "Not authenticated", which tells the frontend nothing useful.

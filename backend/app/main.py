@@ -112,3 +112,11 @@ app.include_router(meta.router)
 app.include_router(admin.router)
 
 
+@app.get("/", tags=["meta"])
+def root() -> dict:
+    return {
+        "name": settings.app_name,
+        "version": settings.version,
+        "docs": "/docs",
+        "health": "/health",
+    }

@@ -1,5 +1,5 @@
 """
-InterviewAce AI - FastAPI application entry point.
+
 
 Run from the repository root:
 

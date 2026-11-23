@@ -5,7 +5,7 @@ Run from the repository root:
 
     uvicorn backend.app.main:app --reload --port 8000
 
-
+Interactive API docs: http://localhost:8000/docs
 """
 
 from __future__ import annotations
@@ -112,11 +112,3 @@ app.include_router(meta.router)
 app.include_router(admin.router)
 
 
-@app.get("/", tags=["meta"])
-def root() -> dict:
-    return {
-        "name": settings.app_name,
-        "version": settings.version,
-        "docs": "/docs",
-        "health": "/health",
-    }

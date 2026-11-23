@@ -1,11 +1,11 @@
 """
-
+InterviewAce AI - FastAPI application entry point.
 
 Run from the repository root:
 
     uvicorn backend.app.main:app --reload --port 8000
 
-Interactive API docs: http://localhost:8000/docs
+
 """
 
 from __future__ import annotations

@@ -100,6 +100,6 @@ def decode_access_token(token: str) -> dict[str, Any]:
             algorithms=[settings.algorithm],
             issuer="interviewace-ai",
         )
-    except jwt.ExpiredSignatureError as exc:
-        raise TokenError("Your session has expired. Please sign in again.") from exc
   
+    except jwt.InvalidTokenError as exc:
+        raise TokenError("Invalid authentication token.") from exc

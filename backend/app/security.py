@@ -1,19 +1,4 @@
-"""
-Password hashing and JWT issue/verify.
 
-WHY bcrypt DIRECTLY AND NOT passlib
------------------------------------
-passlib is the usual tutorial answer, but it is unmaintained and its bcrypt
-backend breaks against bcrypt 4.x. Two functions is not enough code to justify
-a dependency that logs errors on import.
-
-WHY THE SHA-256 PRE-HASH
-------------------------
-bcrypt silently truncates anything past 72 bytes - two different long
-passwords sharing their first 72 bytes would authenticate each other. Hashing
-to a fixed-length digest first removes the truncation entirely. base64 is used
-because the raw digest can contain a NUL byte, which bcrypt also truncates at.
-"""
 
 from __future__ import annotations
 

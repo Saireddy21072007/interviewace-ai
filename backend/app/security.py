@@ -87,7 +87,9 @@ def create_access_token(subject: str | int, extra: dict[str, Any] | None = None)
         "exp": now + timedelta(minutes=settings.access_token_expire_minutes),
         "iss": "interviewace-ai",
     }
-    
+    if extra:
+        payload.update(extra)
+    return jwt.encode(payload, settings.secret_key, algorithm=settings.algorithm)
 
 
 def decode_access_token(token: str) -> dict[str, Any]:

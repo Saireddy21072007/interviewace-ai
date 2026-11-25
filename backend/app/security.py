@@ -53,7 +53,7 @@ def verify_password(password: str, password_hash: str) -> bool:
         return False
 
 
-
+PASSWORD_RULES = "At least 8 characters, including one letter and one number."
 
 
 def password_problems(password: str) -> list[str]:
@@ -102,5 +102,4 @@ def decode_access_token(token: str) -> dict[str, Any]:
         )
     except jwt.ExpiredSignatureError as exc:
         raise TokenError("Your session has expired. Please sign in again.") from exc
-    except jwt.InvalidTokenError as exc:
-        raise TokenError("Invalid authentication token.") from exc
+  

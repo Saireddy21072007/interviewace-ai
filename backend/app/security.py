@@ -15,7 +15,19 @@ to a fixed-length digest first removes the truncation entirely. base64 is used
 because the raw digest can contain a NUL byte, which bcrypt also truncates at.
 """
 
+from __future__ import annotations
 
+import base64
+import hashlib
+from datetime import datetime, timedelta, timezone
+from typing import Any
+
+import bcrypt
+import jwt
+
+from .config import get_settings
+
+settings = get_settings()
 
 
 # --------------------------------------------------------------------------- #
@@ -41,7 +53,7 @@ def verify_password(password: str, password_hash: str) -> bool:
         return False
 
 
-PASSWORD_RULES = "At least 8 characters, including one letter and one number."
+
 
 
 def password_problems(password: str) -> list[str]:
